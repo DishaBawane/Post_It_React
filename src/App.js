@@ -1,23 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import './Post_It_Style.css';
+import Card from './Card';
+import Card_Post from './Card_Post';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="sec1-container">
+        <h2>POST IT</h2>
+        <Card/>
+      </div>
+      <div className="sec2-container">
+        <Card_Post/>
+      </div>
+   
     </div>
   );
 }
