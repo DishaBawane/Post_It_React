@@ -3,7 +3,7 @@ import './Post_It_Style.css'
 
 
 
-const Post_It_Form =()=>{
+const FormCard =()=>{
 return (
     <form className="form-input">
         <input  autocomplete="off" type="text" className="title" placeholder="Title"></input>
@@ -16,4 +16,4 @@ return (
 
 }
 
-export default Post_It_Form
+export default FormCard

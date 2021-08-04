@@ -1,8 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
-import './Post_It_Style.css';
-import Card from './Card';
-import Card_Post from './Card_Post';
+import './Components/Post_It_Style.css';
+import Card from './Components/Card';
+import PostCard from './Components/PostCard';
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
         <Card/>
       </div>
       <div className="sec2-container">
-        <Card_Post/>
+        <PostCard/>
       </div>
    
     </div>
