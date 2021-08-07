@@ -1,27 +1,27 @@
-import React from 'react';
+import React  from 'react';
 import './Post_It_Style.css';
 
+  const PostCard=(props)=>{
+//   const month= props.date.toLocaleString('en-US',{ month:'long'});
+//   const day= props.date.toLocaleString('en-US',{ month:'2-digit'});
+//   const year=props.date.getFullYear();
 
-
-
-
-
-const PostCard=()=>{
-
+ 
     return <div className="card">
               <div className="image-container">
-                <img class="image_post"  src="https://th.bing.com/th/id/R.f8300f8f433b90e19ca2f807d14d9d38?rik=hP318Di8708nbA&riu=http%3a%2f%2fwww.thelandofsnows.com%2fwp-content%2fuploads%2f2012%2f05%2fDSC01637.jpg&ehk=uXjOJtJsR1QBc%2bbWiZjT2Velc%2fcQP2wNDU4J%2fVWexSg%3d&risl=&pid=ImgRaw&r=0"/>
-            </div>
+                <img className="image_post"  src= {props.img} alt=""/>
+              </div> 
             <div>
                 <div className="title_date_post">
-                    <h2 className="title_post">Nature</h2>
-                    <p className="date">4-08-21</p>
+                    <h2 className="title_post">{props.title}</h2>
+                    {/* <p className="date">{props.date.toISOString()}</p> */}
+                    {/* <p className="date"> {props.date.toISOString()}</p> */}
                 </div>
                 <div className="description_post">
-                    <p className="description">Himalaya Mountain Ranges</p>
+                    <p className="description">{props.text}</p>
                 </div>
                 <div className="category_post">
-                    <button className="category">Nature</button>
+                    <button className="category">{props.category}</button>
                 </div>
             </div>
         
