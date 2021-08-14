@@ -46,9 +46,6 @@ const Card = (props) => {
     };
 
    
-
-    
-
   return (
     <div className="inputcontainer">
   

@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React, { useState } from "react";
 import "./App.css";
 import "./Components/Post_It_Style.css";
 import Card from "./Components/Card";
@@ -28,14 +28,9 @@ const postObj = [
   },
 ];
 
-
-
-
 function App() {
+  const [items, setItems] = useState(postObj);
 
-  const [items,setItems]=useState(postObj);
-
- 
   const savePostDataHandler = (enteredPostData) => {
     // const postData = {
     //   ...enteredPostData,
@@ -44,28 +39,30 @@ function App() {
     // console.log("In App.js");
     // console.log(postData);
     // console.log(postObj);
-    setItems((prevItems)=>{[enteredPostData,...items]});
-
+    console.log(enteredPostData);
+    setItems((prevItems) => {
+      return [enteredPostData, ...prevItems];
+    });
   };
 
   return (
+  
     <div className="App">
       <div className="sec1-container">
         <h2>POST IT</h2>
         <Card onSavePostData={savePostDataHandler} />
       </div>
       <div className="sec2-container">
-         {postObj.map((postItems) =>{ return ( 
+        {items.map((postItems) => (
           <PostCard
             title={postItems.title}
             text={postItems.text}
             img={postItems.img}
             category={postItems.category}
-            date={postItems.date}
           />
-        )})};
-
-        {/* <PostCard items={postObj} /> */} 
+        ))}; 
+        
+        
         {/* <PostCard
           title={postObj[0].title}
           text={postObj[0].text}
