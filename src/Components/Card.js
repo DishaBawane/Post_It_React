@@ -27,6 +27,7 @@ const Card = (props) => {
     const submitHandler=(event)=>{
         event.preventDefault();
         const postData = {
+            id: Math.random().toString(),
             title:enteredTitle,
             text:enteredText,
             img:enteredImg,
@@ -75,6 +76,7 @@ const Card = (props) => {
           className="category_get"
         ></input>
         <button onClick={clickHandler} className="postbtn">POST IT</button>
+        {/* <button className="postbtn">POST IT</button> */}
       </form>
     </div>
   );
