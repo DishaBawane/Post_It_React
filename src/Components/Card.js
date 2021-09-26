@@ -76,7 +76,6 @@ const Card = (props) => {
           className="category_get"
         ></input>
         <button onClick={clickHandler} className="postbtn">POST IT</button>
-        {/* <button className="postbtn">POST IT</button> */}
       </form>
     </div>
   );
