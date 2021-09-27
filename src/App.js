@@ -31,14 +31,15 @@ function App() {
           "X-Parse-Application-Id": "MVV6avFp",
           "Content-Type": "application/json"
         }
-      },
+      },  
       transformTasks
     );
   }, [fetchData]);
 
   const createdPostData = (data) => {
+
     const createdNewPost = {
-      id:  data.objectId ,
+      id:  data.id ,
       text: data.description,
       title: data.title,
       img: data.image,
@@ -49,6 +50,8 @@ function App() {
 
     setItems((prev)=>[createdNewPost,...prev]);
   };
+
+
 
 
   const addNewPostHandler = async (data) => {
@@ -98,4 +101,5 @@ function App() {
 }
 
 export default App;
+
 
